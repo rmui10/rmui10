@@ -1,0 +1,12 @@
+Team Asinine - Winnie Huang, Renee Mui, Anya Zorin
+SoftDev
+K08 -- Virtual Insanity: research into virtual environments
+2020-10-08
+
+$ python3 -m venv ~/myherozero
+
+The above command is used to create a virtual environment in the home directory called myherozero. Virtual environments are directory trees with their own specific version of Python and other necessary packages. They are used so that multiple projects can be run together even if they require different versions of Python or different packages. The -m is used to run the module provided after, in this case venv, as a script.
+
+Resources: 
+https://docs.python.org/3/using/cmdline.html
+https://docs.python.org/3/tutorial/venv.html

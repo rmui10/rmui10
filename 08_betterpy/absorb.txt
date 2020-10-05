@@ -1,0 +1,28 @@
+Team Asinine - Winnie Huang, Renee Mui, Anya Zorin
+SoftDev
+K08 -- Cross Pollination: visit other workshops and note any questions, comments, concerns
+2020-10-08
+
+Winnie’s Workshop
+- Really nice and concise way of picking a random weighted occupation using random.choice
+- Also added an option of having no job to address the missing 0.2%
+
+Renee’s Workshop
+- Used a longer method to pick a random weighted occupation
+- Picked a random number from 0 to 99.8 and subtracted each occupation’s percentage from it until it became negative
+
+Anya’s Workshop
+- Separated code into different methods and used a lot of comments to explain everything clearly
+- Used open method to read in the csv and then manipulated each line to pick out info
+- Similar method as Renee’s group to pick occupation
+
+Amelia’s Workshop
+- Similar method of creating dictionary as Anya’s group
+- Also used random.choice like Winnie
+- Had a lot of comments to explain their code
+
+Pak’s Workshop
+- Separated the file into an array first and then moves relevant info into a dictionary
+- Converted percentages to ranges and then compares a random number to each range to pick random occupation
+- Has a step to make sure the all the percentages are rounded to the nearest tenth
+- Seems like a very Java based approach
