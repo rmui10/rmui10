@@ -1,7 +1,7 @@
 Team Asinine - Winnie Huang, Renee Mui, Anya Zorin
 SoftDev
 K08 -- Cross Pollination: visit other workshops and note any questions, comments, concerns
-2020-10-08
+2020-10-05
 
 Winnie’s Workshop
 - Really nice and concise way of picking a random weighted occupation using random.choice
