@@ -1,7 +1,7 @@
 Team Asinine - Winnie Huang, Renee Mui, Anya Zorin
 SoftDev
 K08 -- Virtual Insanity: research into virtual environments
-2020-10-08
+2020-10-05
 
 $ python3 -m venv ~/myherozero
 
