@@ -1,0 +1,27 @@
+Team Asinine - Winnie Huang, Renee Mui, Anya Zorin
+SoftDev
+K09 -- Simple Path of Greatness: answer questions about running a simple web page
+2020-10-07
+
+Q0: Where have you seen similar syntax in other langs?
+This reminds us of making a new instance of an object in Java. In this case, Flask would 
+be like the object name and app would be like the name of the new instance.
+
+Q1: What points of reference do you have for meaning of '/'?
+'/' might refer to the '/' in the path of a directory or the '/' in URLs. It might be used 
+to specify the path where the method's results will be displayed.
+
+After running the file, we noticed that the link to the page is composed of a series of 
+numbers and then the path specified before the function, or '/' here.
+
+Q2: Where will this print to? What will it print?
+We think the print(__name__) line will print the name of the module being run, in this 
+case, __main__, to the terminal where this program was run. 
+
+Q3: Will this appear anywhere? How u know?
+We think that this will appear on the webpage that shows up when this file is run because 
+it is being returned by the function whose result will be displayed on the page.
+
+Q4: Where have you seen similar constructs in other languages?
+This reminds us of calling methods in Java, with the dot operator being used to call the 
+run method on the instance called app.
