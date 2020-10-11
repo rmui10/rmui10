@@ -1,14 +1,9 @@
-"""
- Team Bad Vibes: Winnie Huang, Eric Lo
- SoftDev
- K07 -- StI/O: Divine your Destiny!
- 2020-09-30
- 
- Our Approach: We interpretted the problem step by step given the directions. First, we learned
- to download a file from github, how to read a csv file, and how to generate a dictionary based
- off of the responses on the csv file. Lastly, we learned to choose a random job occupation with
- the given weighted probability.
-"""
+#Team Asinine - Winnie Huang, Renee Mui, Anya Zorin
+#SoftDev
+#K10 -- Putting Little Pieces Together: display random job on webpage
+#2020-10-11
+
+#based off of Winnie's original homework
 
 import csv
 import random
@@ -29,10 +24,10 @@ dictionary['percentage'].pop()                    #gets rid of the 99.8 entry
 dictionary['job occupation'].append('None')       #creates an option for missing percentage
 dictionary['percentage'].append(0.2)              #missing percentage out of 100% probability
 
-def getDict():
+def getDict(): #allows us to access dictionary from other files
     return dictionary
 
-def getJob():
-    return(random.choices(getDict()['job occupation'], weights=getDict()['percentage'], k=1)[0])
+def getJob(): #returns random weighted occupation
+    return random.choices(getDict()['job occupation'], weights=getDict()['percentage'], k=1)[0]
 
 print(getJob())
