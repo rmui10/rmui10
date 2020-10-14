@@ -1,0 +1,12 @@
+Team Asinine - Winnie Huang, Renee Mui, Anya Zorin
+SoftDev
+K11 -- Some Things Never Change: display static files using flask
+2020-10-13
+
+Static Dir: Set of files that never changes and that flask can recognize as so. 
+
+http://127.0.0.1:5000/static/foo.txt brings you to the plaintext file with no formating and fixed 
+width font. The question about what happens is shown on the page. 
+
+http://127.0.0.1:5000/static/foo.html brings you to the html static file with no formating but in 
+times new roman. The question abuot what happens is NOT shown on the page.

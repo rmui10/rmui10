@@ -1,0 +1,27 @@
+Team Asinine - Winnie Huang, Renee Mui, Anya Zorin
+SoftDev
+K12 -- ...or The Only Constant is Change?: Basic jinja and templates
+2020-10-13
+
+#Q0: What happens if you remove render_template from this line? 
+NameError occurs since the name of the method render_template in app.py is not defined without 
+the import. 
+
+#Q1: Can all of your teammates confidently predict the URL to use to load this page?
+Yes :)
+
+#Q2: What is the significance of each argument?
+
+    'model_tmplt.html': tells flask which file in the templates folder to load. 
+
+    foo="fooooo": it tells the template the value to put in place of {{foo}} when loading the file. 
+
+    collection=coll: (coll = [0,1,1,2,3,5,8]) sends the list of numbers coll to the template so that 
+    it can run the for loop and display the numbers in a list. 
+
+Questions: How come flask requires keywords such as templates or static as folder names?
+            (probably one of the main elements of the framework, so that you need to take
+            less steps yourself to find the files needed, built in structure documented in
+            the flask documentation)
+
+Extra Notes: You need to indicate the end of the for loop in jinja using  {% endfor %}
