@@ -1,0 +1,33 @@
+<!-- Team Sleep Deprived: Victoria Gao, Renee Mui, Anya Zorin
+SoftDev
+K13 -- Template for Success
+2020-10-19 -->
+
+<html>
+
+  <head>
+    <title> {{ title }} </title>
+  </head>
+
+  <body>
+      <p>Team Sleep Deprived: Victoria Gao, Renee Mui, Anya Zorin
+      <br>SoftDev
+      <br>K13 -- Template for Success
+      <br>2020-10-19</p>
+      <table>
+          <tr>
+              <th>Job Class</th>
+              <th>Percentage</th>
+              <th>How to Get Started</th>
+          </tr>
+          {% for i in range(0,length) %}
+          <tr>
+            <td>{{ jobs[i] }}</td>
+            <td>{{ percents[i] }}</td>
+            <td><a href= "{{ urls[i] }}"> {{ urls[i] }}</a></td>
+          </tr>
+          {% endfor %}
+      </table>
+      <p><b>Randomly selected occupation</b>: {{ r_job }}</p>
+  </body>
+</html>

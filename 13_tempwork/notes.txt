@@ -1,0 +1,19 @@
+Team Sleep Deprived - Victoria Gao, Renee Mui, Anya Zorin
+SoftDev
+K13 -- Template for Success: Basic jinja and templates - use temping to display job info
+2020-10-17
+
+In app.py, we read in the csv file and used random.choices to pick a random occupation. 
+We then passed the dictionary and random occupation to the html template using render_template. 
+In the html file, we made a table of the occupation information using a for loop. 
+We looped through the dictionary and added a row in the table for each of the occupations.
+
+A problem we ran into was trying to import a file from another folder. While we had the random
+occupation picker code already in our previous homework folders, we didn't know how to import that
+code. As a result, we just copied and pasted the occupation picker code to app.py, since it wasn't that
+much code anyway.
+
+To add links to the displayed table, we created a dictionary with occupations as its keys and a list containing the percentage and link as its values.
+We returned a list of occupations, a list of percentages, a list of links, and the number of occupations in app.py so we can 
+use for i in range(0,<number of occupations>) in the html file to loop through the dictionary 
+and use i as an index for the occupation, percentage, and url lists.  
