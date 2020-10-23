@@ -1,0 +1,40 @@
+Team Sleep Deprived - Victoria Gao, Renee Mui, Anya Zorin
+SoftDev
+LJ00: m1 -- Chapter 1 MongoDB: What is MongoDB?
+2020-10-21
+
+Before asking questions check the class forum to tsee if it has already been answered :
+https://discourse.university.mongodb.com/c/M001
+
+Chapter 1 Lecture Notes (from the course):
+
+Collection - an organized store of documents in MongoDB usually with common fields between 
+documents. There can be many collections per database and many documents per collection.
+
+Document - a way to organize and store data as a set of field-value pairs.
+
+Field - a unique identifier for a datapoint.
+
+Value - data related to a given identifier.
+
+Collection - an organized store of documents in MongoDB, usually with common fields between
+documents. There can be many collections per database and many documents per collection.
+
+Replica Set - a few connected machines that store the same data to ensure that if something 
+happens to one of the machines the data will remain intact. Comes from the word replicate 
+- to copy something.
+
+Instance - a single machine locally or in the cloud, running a certain software, in our case 
+it is the MongoDB database.
+
+Cluster - group of servers that store your data.
+
+
+Personal/Team Notes:
+- use the in browser IDE for the labs
+- you don't have to download anything
+- the Atlas interface has lots of useful things
+- it includes statistics on the database
+- you can add and delete users, but we will not really be dealing with that in this course
+- you connect to atlas using the connection link you get from clicking the connect button 
+on the Atlas interface for the cluster. 

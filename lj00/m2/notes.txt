@@ -1,0 +1,54 @@
+Team Sleep Deprived - Victoria Gao, Renee Mui, Anya Zorin
+SoftDev
+LJ00: m2 -- Chapter 2 MongoDB: Importing, Exporting, and Querying Data
+2020-10-22
+
+JSON: java Script Standard Object Notation
+    -start and end with {}
+    -seperate each key and value with :
+    -seperate each key value pair with ,
+    -"keys" must have "" around them
+    -MongoDB refers to "keys" as "fields" 
+
+    -User freindly and very readable 
+    -Text-based makes it very slow to process
+    -Also takes up a lot of room
+    -Limits data types
+
+BSON: Binary JSON
+    -binary JSON to get rid of disadvantages 
+    -only machine can read but makes it take less space
+    -any JSON can be converted to BSON, so MongoDB supports both
+    -allows for more data types as well
+
+EXPORT
+    -Exporting to another machine it is better to use BSON
+    -Exporting to read it is better to use JSON, even though it will be slower
+    -mongodump --uri "mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/<dirname>" (exports in BSON)
+    -
+
+mongoexport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/<name>" --collection=<collection name> --out=<filename>.json (exports in JSON)
+    -uri: uniform resource identifier 
+        -srv- secure connection
+
+Importing
+    -mongorestore --uri "mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/<name>"  --drop dump (imports BSON)
+    -mongoimport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/<name>" --drop <json filename> (imports JSON)
+
+Namespace - The concatenation of the database name and collection name is called a namespace.
+
+We looked at the sample_training.zips collection and issued the following queries:
+
+{"state": "NY"}
+{"state": "NY", "city": "ALBANY"}
+
+CONNECTION TO SHELL
+    -connect: mongo "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/admin" 
+    -show dbs (shows all the databases in the cluster+admin+local db)
+    -use sample_training (basically goes into the that database)
+    -show collections (hows diff collection names list)
+    -db.zips.find({"state": "NY"}) (looks in the collection zip, then find, and the the query name)
+    -^will show first 20, type "it" for the next 20
+    -db.zips.find({"state": "NY"}).count() (shows number)
+    -db.zips.find({"state": "NY", "city": "ALBANY"}) (more specific queries)
+    -db.zips.find({"state": "NY", "city": "ALBANY"}).pretty() (makes it more readable)
