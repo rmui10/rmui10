@@ -1,0 +1,64 @@
+# Team WAR (William Yin, Ariel Schechter, Renee Mui)
+# LJ01 - Le Voyage de Learnination avec Mongo, Deuxième Phase
+# Soft Dev
+# 2020-10-29
+
+Lecture 1: Inserting New Documents - ObjectId()
+- Can add documents through UI (Insert Document button near the top of the page)
+- Every document must have its own unique id of type ObjectId() (one given by
+default)
+- You can have multiple documents with the same field value pairs as long as each
+has a unique id (this will not throw an error)
+- It’s generally not good practice to have all the field-value pairs be identical
+in all documents nor is it good practice to have them all radically different.
+This doesn’t serve much of a purpose in the first case and disorganizes the data
+in the second.
+
+Lecture 2: Inserting New Documents - insert() and errors
+- If you try to import an existing document into a collection, it returns a
+duplicate id error
+- Instead use --drop <document> before to get rid of duplicate documents
+- findOne() shows you the first document that matches a query (this does not,
+however, make it clear if that is the only document that matched your query or
+just one of many)
+- If an _id is not specified when a document is inserted, it will be automatically
+generated before the document is added
+    - This means that you can have 2 documents that are identical and you can
+    avoid the duplicate key error as long as you don’t specify the _id on one or
+    both of them.
+
+Lecture 3: Inserting New Documents - insert() order
+- Can use insert() method to add multiple documents as long as the documents are
+put in an array
+- Documents are inserted in the order provided in the array by default
+    - Any error in inserting one of the documents puts everything else on hold
+    - This can be overridden by adding {“ordered”: false} as an argument for
+    insert()
+- If you try to add a document to a collection or database that doesn’t exist,
+mongoDB creates one for you. This makes it easier to create new
+collections/databases but doesn’t throw errors for typos so always double check
+you spelled the database name and collection name you wanted correctly.
+
+Lecture 4: Updating Documents - Data Explorer
+- Can use edit button in UI to change a document
+- MongoDB is very flexible -- documents and arrays can be values too
+
+Lecture 5: Updating Documents - mongo shell
+- updateOne() updates the first document that matches a query, while updateMany()
+updates all of them
+- updateMany() takes in two arguments: the query and the update that needs to
+happen
+    - To increase a value, use {“$inc”: {<field>: <increment>, …}}
+    - To set a new value, use {“$set”: {<field>: <new value>, …}}
+        - If the field doesn’t exist, MongoDB adds that field to the document (same
+        as databases and collections)
+    - To add an element to an array, use {$push: {<field>:<value>, …}}
+
+Lecture 6: Deleting Documents and Collections
+- Can use delete button in UI
+- deleteOne() deletes first document that fits query and deleteMany() deletes all
+- Mostly use deleteOne() when querying by _id value to make sure deleting intended
+document and not missing anything
+- To delete a collection, can use --drop with mongoimport or from the mongo shell
+with the drop() method
+- Be careful when deleting -- deleted information is lost forever!
