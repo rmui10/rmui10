@@ -1,0 +1,50 @@
+# Team WAR (Renee Mui, Ariel Schechter, William Yin)
+# LJ01 - Le Voyage de Learnination avec Mongo, Deuxième Phase
+# Soft Dev
+# 2020-11-11
+
+Lecture 1: Query Operators - Comparison
+- Query operators let us find data in different ways
+- Ex: comparison operators ($eq for =, $neq for !=, $gt for >, $lte for <=, etc.)
+    - Used in the format { <field>: { <operator>: <value> } }
+- In mongo shell, use query operators with the find() method
+- Equals operator is implicit in certain cases
+    - { “usertype”: { “$eq”: “Customer: } } is the same as { “usertype”: “Customer” }
+    - Equals operator is used as the default operator when one isn’t specified
+
+Lecture 2: Query Operators - Logic
+- $and finds the documents that meet all the query clauses
+- $or finds documents that meet at least one of the query clauses
+- $nor find documents that don’t meet any of the clauses
+- $not negates the clauses
+
+- $and, $or, $nor use the syntax { <operator>: [{statement1}, {statement2}, … ]}
+- $not uses the syntax {$not: {statement}}
+
+- $and is used as default operator when one isn’t specified
+- Statements can just be separated by commas
+- Use explicit $and when using the same operator more than once in a query
+
+Lecture 3: Expressive Query Operator
+- Syntax: { “$expr”: { <expression> } }
+- Lets us use more than one simple operation and variables/conditionals
+- Can use to compare two values in the same document
+- $ can be used to access the value of a field
+- Uses aggregation syntax: { <operator>: { <field>, <value> } }
+
+Lecture 4: Array Operators
+- $push: add elements to array or turns field into array
+- When searching for an array, order matters
+- $size: returns all documents with array field of the specified length
+- $all: returns all documents with array field containing all the specified elements (order doesn’t matter)
+
+Lecture 5: Array Operators and Projection
+- Projection lets us specify fields we do and don’t want to see
+- Syntax: db.<collection>.find( { query }, { <projection> })
+- Projection syntax: { <field>: #, … } -- # is either 1 (include) or 0 (exclude)
+- Cannot mix 0s and 1s unless using 0 to exclude _id
+- $elemMatch can be used to find array field with at least one matching element
+
+Lecture 6: Array Operators and Sub-Documents
+- Use dot notation to access sub-documents and their fields
+- $regex can be used to search for strings formatted a certain way
