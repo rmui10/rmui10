@@ -1,0 +1,49 @@
+Team Sleep Deprived- Victoria Gao, Anya Zorin, Renee Mui
+SoftDev
+lj02: m5 -- Chapter 5 MongoDB: Indexing and Aggregation Pipeline
+2020-11-24
+
+Aggregation Framework
+- Another way to query data with aggregate() method
+- aggregate() method takes in an array where order matters (pipeline)
+- $match filters for documents that fit a certain condition
+- $project shows only the specified fields
+- $group separates data into multiple distinct reservoirs
+- Syntax: db.collection.aggregate([{“$match”:{ }}, {“$project”:{ }},{“$group”:{ }}])
+
+sort() and limit()
+- Both are cursor methods -- applied to the result of the find() method
+- sort() method can order data based on one or more fields
+- Use 1 to sort by increasing order and -1 to sort by decreasing order
+- limit(<num>) returns only the top <num> results
+- Usually use sort(), then limit() for best results
+- If you use limit() before sort(), you might miss some of the data that you
+meant to sort and include in the results set.  Thus, MongoDB assumes that when
+you use sort() and limit(), you always mean to sort first regardless of the
+order you type sort() and limit().
+- cursor.limit().sort() will produce the same results as cursor.sort().limit()
+
+Indexes
+- Makes query more efficient by storing small portion of data in
+easy-to-traverse form
+- Use createIndex() method to make an index by ordering data based on specified
+field
+
+Introduction to Data Modeling
+- Data Modeling: a way to organize fields in documents to best support
+application and querying
+- Data is stored the way that it is used
+- Information that is accessed together should be stored together
+
+Upsert
+- We can use a query to locate and update a document.
+- db.collection.updateOne({<query to locate>}, {<update>}) updates a single 
+document in a collection based on a filter
+- db.collection.updateOne({<query to locate>}, {<update>},{“upsert”:true})
+- If upsert is true, a document will be updated if there is an existing document
+that matches the query filter.  If there are no matched documents, a new
+document will be inserted into the collection.
+- By default, upsert is set to false.
+- upsert: true is useful when <update> is enough to create a new document and
+the new documents will have the same or similar form to other documents in the
+collection.

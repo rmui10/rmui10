@@ -1,0 +1,40 @@
+Team Sleep Deprived- Victoria Gao, Anya Zorin, Renee Mui
+SoftDev
+lj02: m6 -- Chapter 6 MongoDB: Next Steps
+2020-11-24
+
+Atlas Data Explorer Features
+- The Indexes tab of the MongoDB Data Explorer shows how often indexes are used,
+ when the index was created, and who created the index in a collection; these
+ pieces of info can help you evaluate the performance of this database.  Indexes
+  can be created and dropped.
+- The Schema Anti-Patterns tab gives advice on your data models after users have
+ issued queries against the collection.
+- The Aggregation tab allows users to build aggregation pipelines in the User
+Interface and get a preview of the data returned by each stage of the pipeline.
+Stages we can use in an aggregation pipeline include $match, $project, $group, etc.
+- Order of stages matter!
+- Can export pipeline to another language -- gives you all the code needed to
+use the pipeline in your code
+
+Atlas Products and Options
+- Organizations let us group projects, teams, and billing at the highest level
+- Users in an organization can be grouped into teams for easier management
+- Projects can have multiple clusters, as long as they have different names
+- Realm helps integrate MongoDB into applications
+- Charts lets us create and use visualizations of data
+- Can specify fields, filters, queries, and chart type when making charts
+
+What is MongoDB Compass?
+- Have to connect cluster to Compass
+- Do not touch admin, config, or local databases unless told to!
+- Compass provides numerical summaries of databases
+- Can use Compass to filter through documents similarly to through Atlas explorer
+- Schema provides overview of documents’ fields and data types through charts
+- The indexes tab lets us add indexes to documents
+
+What is MongoDB Compass? (part 2)
+- Explain tab shows information on how a query works
+- Lets us understand and improve the performance of query
+- Validation tab lets you specify restrictions on what can be written to database
+- Ex: can specify data type of a field
