@@ -1,11 +1,11 @@
 #Team RIID - Ishita Gupta, Dragos Lup, Renee Mui, Ian Chen-Adamczyk
 #SoftDev
-#K14 -- Form and Function/Echo user output received from html form 
+#K14 -- Form and Function/Echo user output received from html form
 #2020-12-8
 
 from flask import Flask, render_template, request
 
-app = Flask(__name__) 
+app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
@@ -15,8 +15,11 @@ def disp_loginpage():
 @app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
     username = request.form['username']
+    if (username == ""):
+        print("empty string")
+    print("Username"+username)
     return render_template('response.html', name = username, method = request.method)
-    
-if __name__ == "__main__": 
-    app.debug = True 
+
+if __name__ == "__main__":
+    app.debug = True
     app.run()
