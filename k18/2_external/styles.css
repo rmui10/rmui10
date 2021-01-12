@@ -1,0 +1,67 @@
+/* Team VM: Victoria Gao, Renee Mui, Michelle Thuang
+SoftDev pd1
+K18 -- Filler and Finery
+2021-01-02
+*/
+
+body {
+    background: #666666;
+    font-family: Arial; 
+    padding: 0px;
+    margin: 0% 5% 1% 1%;
+  }
+  h1 {
+    width: 100%;
+    margin-top: 12px;
+    padding: 1%;
+    text-align: center; 
+    color:white; 
+    background-color: #bdbbbb;
+  }
+
+  h3 {
+    margin-left: 4%;
+  }
+  
+  p {
+      padding-right: 1%;
+  }
+  
+  a {
+    margin-left: 4%;
+    text-decoration: none; 
+    color: #d1cfcf; 
+    display: block;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0px;
+  }
+  
+  .navbar, .text {
+    position: fixed; 
+    top: 60px; 
+    background-color: #767676;
+    height: 88%
+  }
+
+  .navbar{
+    width: 25%;
+  }
+
+  .text{
+    margin-left: 25%; 
+    width: 70.9%; 
+  }
+  
+  .copyright {
+    background-color: #565656; 
+    color: #76746b; 
+    width: 44.5%; 
+    padding: 15px 15px 15px 50%; 
+    position: fixed; 
+    bottom: 10px; 
+    text-align: right;
+  }
