@@ -1,0 +1,12 @@
+Team VM: Victoria Gao, Renee Mui, Michelle Thuang
+SoftDev pd1
+K18 -- Filler and Finery
+2021-01-02
+
+- on Windows computers, the eye dropper function in Paint can be used to find the exact color of an image
+- the external css file is the same as the code in between the style tags for the internal version
+- multiple classes' attributes can be specified together as long as they are separated by a comma
+    ex:     .navbar, .text {
+                background-color: #767676;
+            }
+- in HTML, the color for dark grey is actually lighter than the color for grey
